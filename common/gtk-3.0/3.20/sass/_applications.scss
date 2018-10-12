@@ -66,6 +66,12 @@ terminal-window,
   background-color: $base_color;
 }
 
+// Pathbar for nautilus >=3.30
+.nautilus-window .path-bar > box > button {
+  margin: 0 4px;
+  padding: 2px;
+}
+
 button.nautilus-circular-button.image-button {
   @extend button.circular;
 }
@@ -181,6 +187,10 @@ $disk_space_free: darken($bg_color, 3%);
                                              darken($header_bg, 7%)) 1 0 1 0; //temporary hack for rhythmbox 3.1
 
     @extend %header_widgets;
+  }
+
+  scrolledwindow.sidebar {
+    border-top-color: darken($dark_sidebar_bg, 6%);
   }
 
   scrolledwindow.sidebar treeview.view {
